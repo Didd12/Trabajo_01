@@ -1,3 +1,5 @@
+import datetime
+
 #Funcion que sirve para agregar la fecha de inicio de reparacion del producto
 def añadir_fecha_ingreso(fechas):
     fecha_ingreso = {}
@@ -13,11 +15,13 @@ def añadir_fecha_orden_lista(fechas):
     fechas.append(fecha_orden_lista)
 
 #Funcion que sirve para agregar la fecha de de retiro del producto
-def añadir_fecha_retiroProducto(fechas):
-    fecha_retiro_producto = {}
-    fechaRetiroProducto = input("Ingrese la fecha de retiro del producto:")
-    fecha_retiro_producto['Fecha de Retiro del Producto:'] = fechaRetiroProducto
-    fechas.append(fecha_retiro_producto)
+def añadir_fecha_retiroProducto(fecha_ingreso, duracion_producto):
+    fecha_expiracion = fecha_ingreso + duracion_producto
+    fecha_actual = datetime('now')
+    if fecha_expiracion < fecha_actual:
+        print("El producto entra por garantia")
+    else:
+        print("El producto no puede entrar por garantia")
     
 #Funcion que sirve para agregar el tipo de orden
 def tipo_orden(ordenes):
