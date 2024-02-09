@@ -49,8 +49,12 @@ def mostrar_tecnicos(tecnico):
 def detalles(detalle):
     detalles = {}
     print("Agregando detalles del producto...")
-    detalle_ingresado = input("Ingrese el detalle del producto:")
+    detalle_ingresado = input("Ingrese la descripcion del aparato y la falla que presenta:")
+    reparacion_aparato = input("¿El aparato fue reparado?:")
+    descripcion_reparacion = input("Describa la reparacion realizada")
     detalles['Detalle del Producto:'] = detalle_ingresado
+    detalles['Reparacion necesaria:'] = reparacion_aparato
+    detalles['Reparacion realizada:'] = descripcion_reparacion
     detalle.append(detalles)
     print("Detalle agregado exitosamente")
 
