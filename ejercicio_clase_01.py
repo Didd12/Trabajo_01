@@ -33,9 +33,28 @@ def clientes(cliente):
     clientes['Nombre del Cliente:'] = cliente_ingresado
     cliente.append(clientes)
     
+#Funcion que sirve para agregar tecnicos
 def tecnicos(tecnico):
     tecnicos = {}
     tecnico_ingresado = input("Ingrese el nombre del cliente ")
+    tecnicos['Nombre del Tecnico:'] = tecnico_ingresado
+    tecnico.append(tecnicos)
+
+def mostrar_tecnicos(tecnico):
+    print("Lista de tecnicos: ")
+    for tecnicos in tecnico:
+        print(f"Nombre: {tecnicos['Nombre del Tecnico:']}")
+    
+#Funcion que sirve para agregar el detalle de los productos
+def detalles(detalle):
+    detalles = {}
+    print("Agregando detalles del producto...")
+    detalle_ingresado = input("Ingrese el detalle del producto:")
+    detalles['Detalle del Producto:'] = detalle_ingresado
+    detalle.append(detalles)
+    print("Detalle agregado exitosamente")
+
+
     
     
 
